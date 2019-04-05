@@ -11,8 +11,9 @@ const initNavbarScroll = () => {
       $(window).scroll(function(event){
         var st = $(this).scrollTop();
         movement += st - lastScrollTop;
+        console.log(st);
 
-        if (st > lastScrollTop) { // scroll down
+        if (st > lastScrollTop && st !== 0) { // scroll down
           if (lastDirection != 1) {
             movement = 0;
           }
