@@ -11,7 +11,6 @@ const initNavbarScroll = () => {
       $(window).scroll(function(event){
         var st = $(this).scrollTop();
         movement += st - lastScrollTop;
-        console.log(st);
 
         if (st > lastScrollTop && st !== 0) { // scroll down
           if (lastDirection != 1) {
@@ -42,7 +41,6 @@ const initNavbarScroll = () => {
         }
 
         lastScrollTop = st;
-        // console.log(margin);
       });
     }
   });
