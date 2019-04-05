@@ -33,6 +33,9 @@
                           required: true,
                           input_html: { autocomplete: "new-password" } %>
               <%= f.input :date_of_birth,
+                          order: [:day, :month, :year],
+                          start_year: Date.today.year,
+                          end_year: Date.today.year - 99,
                           required: true,
                           input_html: { autocomplete: "date-of-birth" } %>
               <%= f.input :gender,
