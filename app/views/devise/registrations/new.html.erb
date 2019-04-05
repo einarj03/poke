@@ -1,6 +1,6 @@
 <div class="register-background ">
   <div class="signup-heading">
-    <h3 class="company-name">P O K E</h3>
+    <h3 class="company-name">Poke</h3>
     <%= render "devise/shared/links" %>
   </div>
   <div class="register-form">
@@ -33,14 +33,14 @@
                           required: true,
                           input_html: { autocomplete: "new-password" } %>
               <%= f.input :date_of_birth,
+                          order: [:day, :month, :year],
+                          start_year: Date.today.year,
+                          end_year: Date.today.year - 99,
                           required: true,
                           input_html: { autocomplete: "date-of-birth" } %>
               <%= f.input :gender,
                           required: true,
-                          input_html: { autocomplete: "gender" } %>
-              <%= f.input :interest_gender,
-                          required: true,
-                          input_html: { autocomplete: "interest_gender" } %>
+                          collection: ["Male", "Female", "Other"] %>
               <%= f.input :photo,
                           required: true,
                           input_html: { autocomplete: "interest_gender" } %>

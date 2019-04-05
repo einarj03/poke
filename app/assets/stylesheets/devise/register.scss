@@ -1,4 +1,5 @@
 .signup-heading {
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -26,10 +27,11 @@
   min-height: calc(100vh - 50px);
 }
 
-.company-name {
-  padding: 20px;
-}
-
 .form-actions {
   text-align: center;
+}
+
+.alert.alert-danger {
+  // top: 16px !important;
+  bottom: calc(100vh - 125px);
 }
