@@ -4,19 +4,21 @@
       <h3 class="company-name">POKE</h3>
       <%= link_to "Login", new_user_session_path %>
     </div>
-    <div class="tagline-container">
-      <h3 class="tagline-first">You've got one shot to</h3>
-      <h2 class="tagline-second">break the ice</h2>
-      <div class="call-to-action">
-        <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-success" %>
+    <div class="learn-more-container">
+      <div class="tagline-container">
+        <h3 class="tagline-first">You've got one shot to</h3>
+        <h2 class="tagline-second">break the ice</h2>
+        <div class="call-to-action">
+          <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-success" %>
+        </div>
       </div>
+      <%= link_to '#learn-more', class: "learn-more-link" do %>
+        <div class="learn-more">
+            <p> How To Poke </p>
+            <i class="fas fa-angle-down"></i>
+        </div>
+      <% end %>
     </div>
-    <%= link_to '#learn-more', class: "learn-more-link" do %>
-      <div class="learn-more">
-          <p> How To Poke </p>
-          <i class="fas fa-angle-down"></i>
-      </div>
-    <% end %>
 
   </div>
 
