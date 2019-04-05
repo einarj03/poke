@@ -1,13 +1,12 @@
 const initNavbarScroll = () => {
   $(function () {
-    var lastScrollTop = 0;
     var $navbar = $('.lower-navbar');
-    var $navbarSpace = $('.navbar-space');
-    var navbarHeight = $navbar.outerHeight();
-    var movement = 0;
-    var lastDirection = 0;
-
     if ($navbar) {
+      var lastScrollTop = 0;
+      var $navbarSpace = $('.navbar-space');
+      var navbarHeight = $navbar.outerHeight();
+      var movement = 0;
+      var lastDirection = 0;
       $(window).scroll(function(event){
         var st = $(this).scrollTop();
         movement += st - lastScrollTop;
