@@ -7,41 +7,43 @@ const initNavbarScroll = () => {
     var movement = 0;
     var lastDirection = 0;
 
-    $(window).scroll(function(event){
-      var st = $(this).scrollTop();
-      movement += st - lastScrollTop;
+    if ($navbar) {
+      $(window).scroll(function(event){
+        var st = $(this).scrollTop();
+        movement += st - lastScrollTop;
 
-      if (st > lastScrollTop) { // scroll down
-        if (lastDirection != 1) {
-          movement = 0;
-        }
-        var margin = Math.abs(movement);
-        if (margin > navbarHeight) {
-          margin = navbarHeight;
-        }
-        margin = -margin;
-        $navbar.css('margin-top', margin+"px");
-        $navbarSpace.css('display', 'none');
+        if (st > lastScrollTop) { // scroll down
+          if (lastDirection != 1) {
+            movement = 0;
+          }
+          var margin = Math.abs(movement);
+          if (margin > navbarHeight) {
+            margin = navbarHeight;
+          }
+          margin = -margin;
+          $navbar.css('margin-top', margin+"px");
+          $navbarSpace.css('display', 'none');
 
-        lastDirection = 1;
-      } else { // scroll up
-        if (lastDirection != -1) {
-          movement = 0;
-        }
-        var margin = Math.abs(movement);
-        if (margin > navbarHeight) {
-          margin = navbarHeight;
-        }
-        margin = margin-navbarHeight;
-        $navbar.css('margin-top', margin+"px");
-        $navbarSpace.css('display', 'block');
+          lastDirection = 1;
+        } else { // scroll up
+          if (lastDirection != -1) {
+            movement = 0;
+          }
+          var margin = Math.abs(movement);
+          if (margin > navbarHeight) {
+            margin = navbarHeight;
+          }
+          margin = margin-navbarHeight;
+          $navbar.css('margin-top', margin+"px");
+          $navbarSpace.css('display', 'block');
 
-        lastDirection = -1;
-      }
+          lastDirection = -1;
+        }
 
-      lastScrollTop = st;
-      // console.log(margin);
-    });
+        lastScrollTop = st;
+        // console.log(margin);
+      });
+    }
   });
 }
 
