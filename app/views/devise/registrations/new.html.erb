@@ -37,10 +37,7 @@
                           input_html: { autocomplete: "date-of-birth" } %>
               <%= f.input :gender,
                           required: true,
-                          input_html: { autocomplete: "gender" } %>
-              <%= f.input :interest_gender,
-                          required: true,
-                          input_html: { autocomplete: "interest_gender" } %>
+                          collection: ["Male", "Female", "Other"] %>
               <%= f.input :photo,
                           required: true,
                           input_html: { autocomplete: "interest_gender" } %>
