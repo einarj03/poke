@@ -2,6 +2,8 @@
   <%= link_to pokes_path, class: "back-btn" do %>
     <i class="fas fa-chevron-left"></i>
   <% end %>
-  <h3> Poke </h3>
+  <%= link_to root_path do %>
+    <h3 class="company-name">Poke</h3>
+  <% end %>
   <h1> <%= @other_user.first_name %> </h1>
 </div>
