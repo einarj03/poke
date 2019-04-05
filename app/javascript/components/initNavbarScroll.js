@@ -12,7 +12,7 @@ const initNavbarScroll = () => {
         var st = $(this).scrollTop();
         movement += st - lastScrollTop;
 
-        if (st > lastScrollTop) { // scroll down
+        if (st > lastScrollTop && st !== 0) { // scroll down
           if (lastDirection != 1) {
             movement = 0;
           }
@@ -41,7 +41,6 @@ const initNavbarScroll = () => {
         }
 
         lastScrollTop = st;
-        // console.log(margin);
       });
     }
   });
