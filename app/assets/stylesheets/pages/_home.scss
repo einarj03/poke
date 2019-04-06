@@ -2,6 +2,7 @@
 html {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  background-color: $dark-purple;
 }
 
 .company-name {
@@ -50,7 +51,7 @@ html {
   .learn-more-container {
     position: absolute;
     width: 100%;
-    bottom: 10px;
+    bottom: 15px;
   }
 
   .tagline-container {

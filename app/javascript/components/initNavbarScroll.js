@@ -7,14 +7,20 @@ const initNavbarScroll = () => {
       const currentScrollPos = window.pageYOffset;
       if (prevScrollpos > currentScrollPos) {
         navbar.style.bottom = "0";
-        // navbarSpace.style.display = "block";
       } else {
-        navbar.style.bottom = "-50px";
-        // navbarSpace.style.display = "none";
+        navbar.style.bottom = "-60px";
       }
       prevScrollpos = currentScrollPos;
+      if($(window).scrollTop() + $(window).height() == $(document).height()) {
+        navbar.style.bottom = "-60px";
+      } else if ($(window).scrollTop() == 0) {
+        navbar.style.bottom = "0";
+      }
     });
   }
 }
 
 export { initNavbarScroll };
+
+$(window).scroll(function() {
+});
