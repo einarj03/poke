@@ -21,6 +21,3 @@ const initNavbarScroll = () => {
 }
 
 export { initNavbarScroll };
-
-$(window).scroll(function() {
-});
