@@ -7,10 +7,10 @@ const initNavbarScroll = () => {
       const currentScrollPos = window.pageYOffset;
       if (prevScrollpos > currentScrollPos) {
         navbar.style.bottom = "0";
-        navbarSpace.style.display = "block";
+        // navbarSpace.style.display = "block";
       } else {
         navbar.style.bottom = "-50px";
-        navbarSpace.style.display = "none";
+        // navbarSpace.style.display = "none";
       }
       prevScrollpos = currentScrollPos;
     });
