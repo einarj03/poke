@@ -1,8 +1,17 @@
-<%# icon_sizes = Rails.configuration.serviceworker.icon_sizes %>
+<% icon_sizes = [192, 512] %>
 {
   "name": "Poke",
   "short_name": "Poke",
   "start_url": "/",
+  "icons": [
+  <% icon_sizes.each.with_index do |dim, i| %>
+    {
+      "src": "<%= image_path "icon-#{dim}.png" %>",
+      "sizes": "<%= "#{dim}x#{dim}" %>",
+      "type": "image/png"
+    }<%= i == (icon_sizes.length - 1) ? '' : ',' %>
+  <% end %>
+  ],
   "theme_color": "#2E1852",
   "background_color": "#49287F",
   "display": "fullscreen",
